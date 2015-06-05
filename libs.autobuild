@@ -1,0 +1,4 @@
+cmake_package 'envire/core'
+cmake_package 'envire/maps'
+
+cmake_package "test/class_loader"

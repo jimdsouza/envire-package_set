@@ -1,1 +1,10 @@
 name: envire
+
+version_control:
+    - envire/.*:
+        github: envire/envire-$PACKAGE_BASENAME
+        branch: master
+
+    - test/class_loader:
+        github: envire/test-$PACKAGE_BASENAME
+        branch: master
