@@ -9,6 +9,10 @@ version_control:
         github: envire/simulation-$PACKAGE_BASENAME
         branch: master
 
+    - perception/.*:
+        github: envire/perception-$PACKAGE_BASENAME
+        branch: master
+        
     - test/class_loader:
         github: envire/test-$PACKAGE_BASENAME
         branch: master
