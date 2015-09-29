@@ -1,5 +1,5 @@
-cmake_package 'envire/core'
-cmake_package 'envire/maps'
-cmake_package 'envire/mars'
-
+cmake_package 'slam/envire_core'
+cmake_package 'slam/envire_maps'
+cmake_package 'slam/envire_pcl'
+cmake_package 'simulation/envire_mars'
 cmake_package "test/class_loader"

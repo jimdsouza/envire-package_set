@@ -1,10 +1,15 @@
 name: envire
 
 version_control:
-    - envire/.*:
-        github: envire/envire-$PACKAGE_BASENAME
+    - slam/.*:
+        github: envire/slam-$PACKAGE_BASENAME
+        branch: master
+
+    - simulation/.*:
+        github: envire/simulation-$PACKAGE_BASENAME
         branch: master
 
     - test/class_loader:
         github: envire/test-$PACKAGE_BASENAME
         branch: master
+
