@@ -17,3 +17,6 @@ version_control:
         github: envire/test-$PACKAGE_BASENAME
         branch: master
 
+    - tools/.*:
+        github: envire/tools-$PACKAGE_BASENAME
+        branch: master
