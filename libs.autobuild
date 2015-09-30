@@ -2,5 +2,4 @@ cmake_package 'slam/envire_core'
 cmake_package 'slam/envire_maps'
 cmake_package 'perception/envire_pcl'
 cmake_package 'simulation/envire_mars'
-cmake_package 'simulation/mars'
 cmake_package "test/class_loader"
