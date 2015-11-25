@@ -26,4 +26,5 @@ end
 in_flavor 'master','stable' do
     mars_package("simulation/mars/plugins/envire_graphics")
     mars_package("simulation/mars/plugins/envire_physics")
+    mars_package("simulation/mars/plugins/envire_joints")
 end
