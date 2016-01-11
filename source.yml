@@ -5,6 +5,10 @@ version_control:
         github: envire/slam-$PACKAGE_BASENAME
         branch: master
 
+    - slam/orogen/.*:
+        github: envire/slam-orogen-$PACKAGE_BASENAME
+        branch: master
+
     - simulation/.*:
         github: envire/simulation-$PACKAGE_BASENAME
         branch: master

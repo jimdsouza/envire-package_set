@@ -1,0 +1,5 @@
+if package_enabled?('orogen')
+    orogen_package 'slam/orogen/envire_core'
+else
+    Autoproj.warn "oroGen is not enabled, skipping the oroGen packages"
+end
