@@ -1,5 +1,6 @@
 cmake_package 'slam/envire_core'
 cmake_package 'slam/envire_maps'
+cmake_package 'slam/envire_types'
 cmake_package 'perception/envire_pcl'
 cmake_package 'tools/envire_smurf'
 
