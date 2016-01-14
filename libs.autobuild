@@ -23,9 +23,9 @@ def mars_package(srcDir,type = :cmake_package)
     end
 end
 
-in_flavor 'master','stable' do
-    mars_package("simulation/mars/plugins/envire_graphics")
-    mars_package("simulation/mars/plugins/envire_physics")
-    mars_package("simulation/mars/plugins/envire_joints")
-    mars_package("simulation/mars/plugins/SMURFToSimulation")
-end
+#in_flavor 'master','stable' do
+#    mars_package("simulation/mars/plugins/envire_graphics")
+#    mars_package("simulation/mars/plugins/envire_physics")
+#    mars_package("simulation/mars/plugins/envire_joints")
+#    mars_package("simulation/mars/plugins/SMURFToSimulation")
+#end
