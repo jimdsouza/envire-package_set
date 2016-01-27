@@ -1,5 +1,6 @@
 # envire packages
 cmake_package 'envire/envire_core'
+cmake_package 'envire/envire_maps'
 cmake_package 'envire/envire_octomap'
 cmake_package 'envire/envire_smurf'
 
