@@ -1,6 +1,17 @@
 name: envire
 
 version_control:
+
+#Pure envire packages
+    - envire/.*:
+        github: envire/envire-$PACKAGE_BASENAME
+        branch: master
+
+    - envire/orogen/.*:
+        github: envire/envire-orogen-$PACKAGE_BASENAME
+        branch: master
+
+# Added envire packages into slam
     - slam/.*:
         github: envire/slam-$PACKAGE_BASENAME
         branch: master
@@ -9,18 +20,12 @@ version_control:
         github: envire/slam-orogen-$PACKAGE_BASENAME
         branch: master
 
+# Added envire packages into simulation
     - simulation/.*:
         github: envire/simulation-$PACKAGE_BASENAME
         branch: master
 
-    - perception/.*:
-        github: envire/perception-$PACKAGE_BASENAME
-        branch: master
-        
+# Test packages. To-Do: remove
     - test/class_loader:
         github: envire/test-$PACKAGE_BASENAME
-        branch: master
-
-    - tools/.*:
-        github: envire/tools-$PACKAGE_BASENAME
         branch: master
