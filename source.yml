@@ -29,3 +29,7 @@ version_control:
     - test/class_loader:
         github: envire/test-$PACKAGE_BASENAME
         branch: master
+
+    - tools/orogen:
+        github: envire/orogen
+        branch: opaque_autogen
