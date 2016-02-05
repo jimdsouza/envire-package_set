@@ -1,5 +1,8 @@
+# envire components
 if package_enabled?('orogen')
-    orogen_package 'slam/orogen/envire_core'
+    orogen_package 'envire/orogen/envire_core'
+    orogen_package 'envire/orogen/envire_octomap'
+    orogen_package 'envire/orogen/envire_pcl'
 else
     Autoproj.warn "oroGen is not enabled, skipping the oroGen packages"
 end

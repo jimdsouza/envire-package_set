@@ -1,7 +1,15 @@
-cmake_package 'slam/envire_core'
+# envire packages
+cmake_package 'envire/envire_core'
+cmake_package 'envire/envire_maps'
+cmake_package 'envire/envire_octomap'
+cmake_package 'envire/envire_pcl'
+cmake_package 'envire/envire_smurf'
+cmake_package 'envire/envire_collision'
+
+cmake_package 'envire/boost_serialization'
+
 cmake_package 'slam/envire_maps'
-cmake_package 'perception/envire_pcl'
-cmake_package 'tools/envire_smurf'
+
 
 in_flavor 'master','stable' do
     mars_package("simulation/mars/plugins/envire_graphics")
