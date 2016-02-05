@@ -3,26 +3,6 @@ cmake_package 'slam/envire_maps'
 cmake_package 'perception/envire_pcl'
 cmake_package 'tools/envire_smurf'
 
-def mars_package(srcDir,type = :cmake_package)
-    if Gem::Version.new(Autobuild::VERSION) <= Gem::Version.new('1.7.2')
-        mars_path="simulation/mars/"
-        send(type,srcDir) do |pkg|
-            pkg.srcdir = mars_path
-            pkg.post_import do
-                pkg.srcdir = srcDir
-                Autoproj.manifest.load_package_manifest(pkg.name)
-            end
-            yield pkg if block_given?
-        end
-    else
-        send(type,srcDir) do |pkg|
-            pkg.define "ROCK",'true' if type == :cmake_package
-            pkg.importdir = "simulation/mars/"
-            yield pkg if block_given?
-        end
-    end
-end
-
 in_flavor 'master','stable' do
     mars_package("simulation/mars/plugins/envire_graphics")
     mars_package("simulation/mars/plugins/envire_physics")
