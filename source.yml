@@ -25,6 +25,10 @@ version_control:
         github: envire/simulation-$PACKAGE_BASENAME
         branch: master
 
+    - tools/.*:
+        github: envire/tools-$PACKAGE_BASENAME
+        branch: master
+
 # Test packages. To-Do: remove
     - test/class_loader:
         github: envire/test-$PACKAGE_BASENAME

@@ -5,10 +5,11 @@ cmake_package 'envire/envire_octomap'
 cmake_package 'envire/envire_pcl'
 cmake_package 'envire/envire_smurf'
 cmake_package 'envire/envire_collision'
-
 cmake_package 'envire/boost_serialization'
 
 cmake_package 'slam/envire_maps'
+
+cmake_package 'tools/plugin_manager'
 
 def mars_package(srcDir,type = :cmake_package)
     if Gem::Version.new(Autobuild::VERSION) <= Gem::Version.new('1.7.2')
