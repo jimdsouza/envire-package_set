@@ -25,11 +25,13 @@ version_control:
         github: envire/simulation-$PACKAGE_BASENAME
         branch: master
 
+# Added envire packages in tools
     - tools/.*:
         github: envire/tools-$PACKAGE_BASENAME
         branch: master
 
-# Test packages. To-Do: remove
-    - test/class_loader:
-        github: envire/test-$PACKAGE_BASENAME
+# Added envire packages in base
+    - base/.*:
+        github: envire/base-$PACKAGE_BASENAME
         branch: master
+
