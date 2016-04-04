@@ -3,8 +3,8 @@ cmake_package 'envire/envire_core'
 cmake_package 'envire/envire_maps'
 cmake_package 'envire/envire_octomap'
 cmake_package 'envire/envire_pcl'
-#cmake_package 'envire/envire_smurf'
-#cmake_package 'envire/envire_urdf'
+cmake_package 'envire/envire_smurf'
+cmake_package 'envire/envire_urdf'
 cmake_package 'envire/envire_collision'
 
 cmake_package 'base/boost_serialization'
@@ -13,10 +13,11 @@ cmake_package 'slam/maps'
 
 cmake_package 'tools/plugin_manager'
 
-#in_flavor 'master','stable' do
-#    mars_package("simulation/mars/plugins/envire_graphics")
-#    mars_package("simulation/mars/plugins/envire_physics")
-#    mars_package("simulation/mars/plugins/envire_joints")
-#    mars_package("simulation/mars/plugins/envire_motors")
-#    mars_package("simulation/mars/plugins/SMURFToSimulation")
-#end
+in_flavor 'master','stable' do
+    mars_package("simulation/mars/plugins/envire_graphics")
+    mars_package("simulation/mars/plugins/envire_physics")
+    mars_package("simulation/mars/plugins/envire_joints")
+    mars_package("simulation/mars/plugins/envire_motors")
+    mars_package("simulation/mars/plugins/envire_sensors")
+    mars_package("simulation/mars/plugins/SMURFToSimulation")
+end
