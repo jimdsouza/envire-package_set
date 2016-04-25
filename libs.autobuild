@@ -6,12 +6,72 @@ cmake_package 'envire/envire_pcl'
 #cmake_package 'envire/envire_smurf'
 #cmake_package 'envire/envire_urdf'
 cmake_package 'envire/envire_collision'
+cmake_package 'envire/envire_gis'
 
 cmake_package 'base/boost_serialization'
 
 cmake_package 'slam/maps'
 
-cmake_package 'tools/plugin_manager'
+import_package "envire/gdal" do |pkg|
+
+    def pkg.buildstamp; "autobuild-stamp" end
+
+    def pkg.prepare
+        super
+
+        stamps = dependencies.map { |pkg2| Autobuild::Package[pkg2].installstamp }
+
+        file buildstamp => stamps do
+            isolate_errors do
+                build
+                progress_done
+            end
+        end
+        task "#{name}-build" => buildstamp
+        file installstamp => buildstamp
+
+
+        in_dir("#{srcdir}/gdal") do
+            run("configure","./configure", "--prefix=#{Autobuild.prefix}", "--includedir=#{Autobuild.prefix}/include/gdal", "--with-gnm")
+        end
+    end
+
+    def pkg.build
+        in_dir("#{srcdir}/gdal") do
+            run("build", Autobuild.tool(:make))
+        end
+    end
+
+    def pkg.install
+        in_dir("#{srcdir}/gdal") do
+            run("install", Autobuild.tool(:make), "install")
+            run("gnm_copy", "cp ./gnm/*.h #{Autobuild.prefix}/include/gdal")
+        end
+    end
+
+    if pkg.respond_to?(:progress_start) # newer versions of autoproj
+        pkg.post_install do
+            pkg.progress_start "building %s" do
+                pkg.do_build
+            end
+            pkg.progress_start "installing %s" do
+                pkg.do_install
+            end
+            pkg.progress_start "generating pkgconfig file for %s" do
+                pkg.do_pkgconfig
+            end
+        end
+    else
+        pkg.post_install do
+            pkg.progress "building %s"
+            pkg.do_build
+            pkg.progress "installing %s"
+            pkg.do_install
+            pkg.progress "generating pkgconfig file for %s"
+            pkg.do_pkgconfig
+        end
+    end
+end
 
 #in_flavor 'master','stable' do
 #    mars_package("simulation/mars/plugins/envire_graphics")

@@ -35,3 +35,7 @@ version_control:
         github: envire/base-$PACKAGE_BASENAME
         branch: master
 
+# External library in envire directory
+    - envire/gdal:
+        github: OSGeo/gdal.git
+        branch: 2.1
