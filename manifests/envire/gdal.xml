@@ -1,0 +1,11 @@
+<package>
+    <description brief="Geospatial Data Abstraction Library">
+        GDAL  is a translator library for raster and vector geospatial data formats
+    </description>
+    <author>GDAL developers</author>
+    <license>X/MIT</license>
+    <url>http://www.gdal.org</url>
+    <depend package="base/cmake" />
+    <rosdep name="boost" />
+  <tags>stable</tags>
+</package>
