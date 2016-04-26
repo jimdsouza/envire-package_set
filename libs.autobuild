@@ -9,6 +9,7 @@ cmake_package 'envire/envire_collision'
 cmake_package 'envire/envire_gis'
 
 cmake_package 'base/boost_serialization'
+cmake_package 'tools/plugin_manager'
 
 cmake_package 'slam/maps'
 
