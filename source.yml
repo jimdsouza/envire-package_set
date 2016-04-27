@@ -39,3 +39,7 @@ version_control:
     - envire/gdal:
         github: OSGeo/gdal.git
         branch: 2.1
+
+    - base/numeric:
+        github: envire/base-numeric
+        branch: true_normal
