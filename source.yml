@@ -30,6 +30,12 @@ version_control:
         github: envire/tools-$PACKAGE_BASENAME
         branch: master
 
+# Special case for tools/smurf
+    - tools/smurf:
+        spacegit: rock-dfki/$PACKAGE_BASENAME
+        branch: master
+
+
 # Added envire packages in base
     - base/.*:
         github: envire/base-$PACKAGE_BASENAME
