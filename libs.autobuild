@@ -8,6 +8,7 @@ cmake_package 'envire/envire_urdf'
 cmake_package 'envire/envire_collision'
 cmake_package 'envire/envire_gis'
 cmake_package 'envire/envire_collider_mls'
+cmake_package 'envire/envire_visualizer'
 
 cmake_package 'base/boost_serialization'
 cmake_package 'tools/plugin_manager'
