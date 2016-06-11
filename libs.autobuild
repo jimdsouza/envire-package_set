@@ -12,7 +12,7 @@ cmake_package 'envire/envire_collider_mls'
 
 cmake_package 'base/boost_serialization'
 cmake_package 'tools/plugin_manager'
-#cmake_package 'tools/smurf'
+cmake_package 'tools/smurf'
 
 cmake_package 'slam/maps'
 
